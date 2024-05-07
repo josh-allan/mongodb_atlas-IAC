@@ -77,3 +77,6 @@ resource "mongodbatlas_database_user" "name" {
     database_name = "admin"
   }
 }
+output "connection_strings" {
+  value = mongodbatlas_cluster.josh-allan.connection_strings.0.standard_srv
+}
